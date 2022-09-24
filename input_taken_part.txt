@@ -1,0 +1,35 @@
+function runProgram(input){
+  let mainArray=input.split("\n");
+  let testCase=Number(mainArray[0]);
+  for(let i=1;i<=testCase;i++)
+  {
+      let array=mainArray[2*i].split(" ").map(Number);
+      let new_arr=array.sort(function(a,b){
+          return a-b;
+      })
+      let maj=-1;
+      //console.log(new_arr);
+      for(let j=0;j<=Math.floor(array.length/2);j++)
+      {
+        if(new_arr[j]==new_arr[j+Math.floor(array.length/2)]){
+            maj=new_arr[j];
+        }
+      }
+      console.log(maj);
+  }
+}
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+let read = "";
+process.stdin.on("data", function (input) {
+    read += input;
+});
+process.stdin.on("end", function () {
+	read = read.replace(/\n$/,"")
+   runProgram(read);
+});
+process.on("SIGINT", function () {
+    read = read.replace(/\n$/,"")
+    runProgram(read);
+    process.exit(0);
+});
