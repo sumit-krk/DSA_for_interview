@@ -32,6 +32,32 @@
 //       runProgram(read);
 //       process.exit(0);
 //   });
+
+//-----------------------------------------------------------------------------------------------------
+//- By object
+let array=[3,3,4,2,4,4,2,4,4];
+let obj={};
+let ele=-1;
+for(let i=0;i<array.length;i++){
+    if(obj[array[i]]==undefined){
+        obj[array[i]]=1;
+    }
+    else
+    {
+       obj[array[i]]+=1; 
+    }
+}
+console.log(obj);
+for(key in obj){
+    console.log(obj[key])
+  if(obj[key]>=Math.floor(array.length/2)+1){
+      ele=key;
+      break;
+  }  
+}
+console.log(ele);
+
+//----------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
 //approach - 2 (moore voting algorithem)
 //-------------------------------------------------------------------------
