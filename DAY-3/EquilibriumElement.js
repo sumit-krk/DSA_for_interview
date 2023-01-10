@@ -1,5 +1,5 @@
 //----------------------------------METHOD-1-------------------------------------
-//By brute forct
+// By brute forct
 // T.C=N*2 and S.C=1
 /*function runProgram(input){
     let mainArray=input.split("\n");
